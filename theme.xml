@@ -1,0 +1,61 @@
+<theme>
+    <formatVersion>4</formatVersion>
+
+	<!-- Configure the grid position and size from here (so the fake grid border get updated accordingly) -->
+    <variables>
+    	<gridXPos>0.1</gridXPos>
+    	<gridXSize>0.8</gridXSize>
+    	<!-- gridXEnd = gridXPos + gridXSize -->
+    	<gridXEnd>0.9</gridXEnd>
+
+    	<gridYPos>0.1</gridYPos>
+    	<gridYSize>0.7</gridYSize>
+    	<!-- gridYEnd = gridYPos + gridYSize -->
+    	<gridYEnd>0.8</gridYEnd>
+
+    	<gridBorderWidth>0.001</gridBorderWidth>
+    	<gridBorderColor>00FF00FF</gridBorderColor>
+    </variables>
+
+	<view name="grid">
+		<imagegrid name="gamegrid">
+			<!-- Configure the grid margin, tile size, selected tile size from here -->
+			<!-- Remove/Add the first ">" to disable/enable a property -->
+			<!-- --><pos>${gridXPos} ${gridYPos}</pos><!-- -->
+			<!-- --><size>${gridXSize} ${gridYSize}</size><!-- -->
+			<!-- --><margin>0.01 0.01</margin><!-- -->
+			<!-- --><tileMaxSize>0.19 0.19</tileMaxSize><!-- -->
+			<!-- --<selectedTileMaxSize>0.25 0.25</selectedTileMaxSize><!-- -->
+		</imagegrid>
+
+		<!-- -->
+		<image name="grid_top_border" extra="true">
+			<path>./art/background.png</path>
+			<color>${gridBorderColor}</color>
+			<pos>${gridXPos} ${gridYPos}</pos>
+			<size>${gridXSize} ${gridBorderWidth}</size>
+		</image>
+
+		<image name="grid_bot_border" extra="true">
+			<path>./art/background.png</path>
+			<color>${gridBorderColor}</color>
+			<pos>${gridXPos} ${gridYEnd}</pos>
+			<size>${gridXSize} ${gridBorderWidth}</size>
+		</image>
+
+		<image name="grid_left_border" extra="true">
+			<path>./art/background.png</path>
+			<color>${gridBorderColor}</color>
+			<pos>${gridXPos} ${gridYPos}</pos>
+			<size>${gridBorderWidth} ${gridYSize}</size>
+		</image>
+
+		<image name="grid_right_border" extra="true">
+			<path>./art/background.png</path>
+			<color>${gridBorderColor}</color>
+			<pos>${gridXEnd} ${gridYPos}</pos>
+			<size>${gridBorderWidth} ${gridYSize}</size>
+		</image>
+		<!-- -->
+	</view>
+</theme>
